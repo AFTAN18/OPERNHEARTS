@@ -72,7 +72,7 @@ export const Navbar = () => {
             </Link>
           ))}
           <Link to="/donate">
-            <Button size="sm" variant="accent">
+            <Button size="sm" variant="accent" className="font-bold text-white">
               Donate Now
             </Button>
           </Link>
@@ -108,7 +108,7 @@ export const Navbar = () => {
                 </Link>
               ))}
               <Link to="/donate" onClick={() => setIsMobileOpen(false)}>
-                <Button className="w-full" variant="accent">Donate Now</Button>
+                <Button className="w-full font-bold text-white" variant="accent">Donate Now</Button>
               </Link>
             </div>
           </motion.div>
