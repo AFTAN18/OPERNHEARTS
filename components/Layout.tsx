@@ -51,8 +51,8 @@ export const Navbar = () => {
                 </button>
             )}
             <Link to="/" className="flex items-center gap-2 group">
-            <div className="bg-primary-600 p-2 rounded-xl text-white shadow-lg group-hover:scale-110 transition-transform">
-                <Heart size={24} fill="currentColor" />
+            <div className="bg-red-600 p-2 rounded-xl text-white shadow-lg group-hover:scale-110 transition-transform">
+                <Heart size={24} fill="currentColor" className="text-white" />
             </div>
             <span className={`text-xl font-bold tracking-tight ${logoTextClass}`}>
                 OpenHearts
@@ -72,7 +72,7 @@ export const Navbar = () => {
             </Link>
           ))}
           <Link to="/donate">
-            <Button size="sm" variant="accent" className="font-bold text-white">
+            <Button size="sm" variant="accent" className="font-bold text-black">
               Donate Now
             </Button>
           </Link>
@@ -108,7 +108,7 @@ export const Navbar = () => {
                 </Link>
               ))}
               <Link to="/donate" onClick={() => setIsMobileOpen(false)}>
-                <Button className="w-full font-bold text-white" variant="accent">Donate Now</Button>
+                <Button className="w-full font-bold text-black" variant="accent">Donate Now</Button>
               </Link>
             </div>
           </motion.div>
@@ -130,7 +130,7 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
           <div className="space-y-6">
             <div className="flex items-center gap-2 text-white">
-              <Heart className="text-primary-500" fill="currentColor" />
+              <Heart className="text-red-500" fill="currentColor" />
               <span className="text-xl font-bold">OpenHearts</span>
             </div>
             <p className="text-slate-400 leading-relaxed">

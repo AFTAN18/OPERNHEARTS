@@ -125,7 +125,7 @@ export const CreateCampaignModal: React.FC<CreateCampaignModalProps> = ({ onClos
                 <select
                   value={formData.status}
                   onChange={(e) => setFormData(prev => ({ ...prev, status: e.target.value }))}
-                  className="w-full px-4 py-2 rounded-lg border border-slate-200 focus:ring-2 focus:ring-primary-500 outline-none"
+                  className="w-full px-4 py-2 rounded-lg border border-slate-200 focus:ring-2 focus:ring-primary-500 outline-none text-black font-semibold bg-white"
                 >
                   <option value="upcoming">Upcoming</option>
                   <option value="active">Active</option>
@@ -181,14 +181,14 @@ export const CreateCampaignModal: React.FC<CreateCampaignModalProps> = ({ onClos
                 type="button"
                 variant="outline"
                 onClick={onClose}
-                className="flex-1 font-semibold text-slate-900"
+                className="flex-1 font-semibold text-black"
               >
                 Cancel
               </Button>
               <Button
                 type="submit"
                 isLoading={isSubmitting}
-                className="flex-1 font-bold text-white"
+                className="flex-1 font-bold text-black"
                 variant="primary"
               >
                 Create Campaign

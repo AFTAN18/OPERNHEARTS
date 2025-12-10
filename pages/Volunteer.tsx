@@ -24,8 +24,8 @@ const StepIndicator = ({ currentStep, steps }: { currentStep: number, steps: str
             <motion.div 
               className={cn(
                 "w-10 h-10 rounded-full flex items-center justify-center border-4 transition-colors duration-300 font-bold",
-                isActive ? "border-primary-100 bg-primary-600 text-white" : 
-                isCompleted ? "border-primary-600 bg-primary-600 text-white" : "border-white bg-slate-200 text-slate-500"
+                isActive ? "border-primary-600 bg-white text-black border-4" : 
+                isCompleted ? "border-primary-600 bg-white text-black border-4" : "border-white bg-white text-black border-2"
               )}
               initial={false}
               animate={{ scale: isActive ? 1.2 : 1 }}
@@ -293,7 +293,7 @@ const Volunteer = () => {
                                   onChange={() => handleAvailabilityChange(time)}
                                   className="accent-primary-600 w-4 h-4" 
                                 />
-                                <span className="text-sm text-slate-700">{time}</span>
+                                <span className="text-sm text-black font-semibold">{time}</span>
                             </label>
                         ))}
                     </div>
@@ -322,7 +322,7 @@ const Volunteer = () => {
                                   }}
                                   className="accent-primary-600 w-4 h-4" 
                                 />
-                                <span className="text-sm text-slate-700">{interest}</span>
+                                <span className="text-sm text-black font-semibold">{interest}</span>
                             </label>
                         ))}
                     </div>
@@ -399,7 +399,7 @@ const Volunteer = () => {
                   variant="ghost" 
                   onClick={prevStep} 
                   disabled={step === 1 || isSubmitting}
-                  className={`${step === 1 ? 'invisible' : ''} font-semibold text-slate-900`}
+                  className={`${step === 1 ? 'invisible' : ''} font-semibold text-black`}
               >
                   <ChevronLeft size={16} /> Back
               </Button>
@@ -409,7 +409,7 @@ const Volunteer = () => {
                 isLoading={isSubmitting}
                 disabled={isSubmitting}
                 variant="primary"
-                className="font-bold text-white"
+                className="font-bold text-black"
               >
                   {step === 3 ? 'Submit Application' : 'Next Step'} 
                   {step !== 3 && <ChevronRight size={16} />}

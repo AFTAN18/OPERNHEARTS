@@ -56,13 +56,13 @@ const Hero = () => {
           
           <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-4 justify-center pt-8">
             <Link to="/volunteer">
-                <Button size="lg" variant="primary" className="w-full sm:w-auto font-bold text-white">
+                <Button size="lg" variant="primary" className="w-full sm:w-auto font-bold text-black">
                     Become a Volunteer <ArrowRight size={20} />
                 </Button>
             </Link>
             <Link to="/donate">
-                <Button size="lg" variant="accent" className="w-full sm:w-auto font-bold text-white">
-                    Donate Now <Heart size={20} className="text-white fill-white/20" />
+                <Button size="lg" variant="accent" className="w-full sm:w-auto font-bold text-black">
+                    Donate Now <Heart size={20} className="text-black fill-black/20" />
                 </Button>
             </Link>
           </motion.div>

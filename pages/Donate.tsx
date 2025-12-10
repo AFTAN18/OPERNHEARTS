@@ -147,8 +147,8 @@ const Donate = () => {
                             onClick={() => { setAmount(val); setIsCustom(false); }}
                             className={`py-3 rounded-xl border-2 font-bold transition-all ${
                                 amount === val && !isCustom 
-                                ? 'border-primary-600 bg-primary-600 text-white shadow-inner' 
-                                : 'border-slate-200 hover:border-primary-400 text-slate-900 bg-white'
+                                ? 'border-primary-600 bg-white text-black shadow-inner border-2' 
+                                : 'border-slate-200 hover:border-primary-400 text-black bg-white'
                             }`}
                         >
                             ${val}
@@ -173,7 +173,7 @@ const Donate = () => {
                         <select 
                           value={selectedCampaign}
                           onChange={(e) => setSelectedCampaign(e.target.value)}
-                          className="w-full px-4 py-2 rounded-lg border border-slate-200 focus:ring-2 focus:ring-primary-500 outline-none"
+                          className="w-full px-4 py-2 rounded-lg border border-slate-200 focus:ring-2 focus:ring-primary-500 outline-none text-black font-semibold bg-white"
                         >
                           <option value="">General Donation</option>
                           {campaigns.map(campaign => (
@@ -312,28 +312,28 @@ const Donate = () => {
                         <div className="mt-6 pt-6 border-t border-slate-800">
                             <div className="flex flex-col items-center justify-center w-full">
                                 <button 
-                                  className="w-full py-5 px-6 text-xl font-bold text-white rounded-xl transition-all duration-200 flex items-center justify-center gap-2.5 disabled:opacity-50 disabled:cursor-not-allowed transform hover:scale-[1.02] active:scale-[0.98]" 
+                                  className="w-full py-5 px-6 text-xl font-bold text-black rounded-xl transition-all duration-200 flex items-center justify-center gap-2.5 disabled:opacity-50 disabled:cursor-not-allowed transform hover:scale-[1.02] active:scale-[0.98]" 
                                   onClick={handleDonate}
                                   disabled={isSubmitting || !donorInfo.name || !donorInfo.email}
                                   style={{ 
-                                    backgroundColor: '#10b981',
-                                    border: '2px solid #34d399',
-                                    boxShadow: '0 0 0 3px rgba(16, 185, 129, 0.3), 0 20px 40px -12px rgba(16, 185, 129, 0.6), inset 0 1px 2px rgba(255, 255, 255, 0.15)',
+                                    backgroundColor: '#ffffff',
+                                    border: '3px solid #10b981',
+                                    boxShadow: '0 0 0 2px rgba(16, 185, 129, 0.2), 0 20px 40px -12px rgba(0, 0, 0, 0.15)',
                                   }}
                                   onMouseEnter={(e) => {
-                                    e.currentTarget.style.backgroundColor = '#059669';
-                                    e.currentTarget.style.boxShadow = '0 0 0 3px rgba(16, 185, 129, 0.5), 0 25px 50px -12px rgba(16, 185, 129, 0.8), inset 0 1px 2px rgba(255, 255, 255, 0.15)';
+                                    e.currentTarget.style.backgroundColor = '#f0fdf4';
+                                    e.currentTarget.style.boxShadow = '0 0 0 2px rgba(16, 185, 129, 0.4), 0 25px 50px -12px rgba(0, 0, 0, 0.2)';
                                   }}
                                   onMouseLeave={(e) => {
-                                    e.currentTarget.style.backgroundColor = '#10b981';
-                                    e.currentTarget.style.boxShadow = '0 0 0 3px rgba(16, 185, 129, 0.3), 0 20px 40px -12px rgba(16, 185, 129, 0.6), inset 0 1px 2px rgba(255, 255, 255, 0.15)';
+                                    e.currentTarget.style.backgroundColor = '#ffffff';
+                                    e.currentTarget.style.boxShadow = '0 0 0 2px rgba(16, 185, 129, 0.2), 0 20px 40px -12px rgba(0, 0, 0, 0.15)';
                                   }}
                                 >
                                   {isSubmitting && (
-                                    <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin mr-2" />
+                                    <div className="w-5 h-5 border-2 border-black border-t-transparent rounded-full animate-spin mr-2" />
                                   )}
-                                  <span className="text-white tracking-wide">Donate ${amount}</span>
-                                  <Heart className="fill-white ml-1" size={22} />
+                                  <span className="text-black tracking-wide font-black">Donate ${amount}</span>
+                                  <Heart className="fill-black ml-1" size={22} />
                                 </button>
                                 
                                 <div className="flex items-center justify-center gap-2 mt-5">
@@ -423,7 +423,7 @@ const Donate = () => {
                                 setPaymentInfo({ cardNumber: '', expiry: '', cvc: '', cardholderName: '' });
                                 setIsCustom(false);
                               }}
-                              className="font-semibold text-slate-900"
+                              className="font-semibold text-black"
                             >
                               Make Another Donation
                             </Button>

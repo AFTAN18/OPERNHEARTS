@@ -43,16 +43,16 @@ const Campaigns = () => {
             <p className="text-slate-600 max-w-xl">Discover projects that align with your passions. 100% of your donation goes directly to the field.</p>
           </div>
           
-          <div className="flex gap-2 overflow-x-auto pb-2 w-full md:w-auto no-scrollbar items-center">
+          <div className="flex gap-3 overflow-x-auto pb-2 w-full md:w-auto no-scrollbar items-center">
             <div className="flex gap-2 overflow-x-auto pb-2">
               {categories.map(cat => (
                 <button
                   key={cat}
                   onClick={() => setFilter(cat)}
-                  className={`px-4 py-2 rounded-full text-sm font-bold whitespace-nowrap transition-colors ${
+                  className={`px-5 py-2.5 rounded-full text-sm font-bold whitespace-nowrap transition-all duration-200 shadow-md ${
                     filter === cat 
-                      ? 'bg-primary-600 text-white' 
-                      : 'bg-white text-slate-900 hover:bg-slate-100 border-2 border-slate-200'
+                      ? 'bg-white text-black shadow-lg shadow-slate-200/50 scale-105 border-2 border-primary-600' 
+                      : 'bg-white text-black hover:bg-primary-50 hover:border-primary-400 border-2 border-slate-300 hover:shadow-lg'
                   }`}
                 >
                   {cat}
@@ -62,10 +62,10 @@ const Campaigns = () => {
             <Button 
               size="sm" 
               onClick={() => setShowCreateForm(true)}
-              className="ml-2 font-bold text-white"
+              className="ml-2 font-bold text-black bg-white hover:bg-slate-50 shadow-lg shadow-slate-200/50 border-2 border-primary-600 px-5 py-2.5"
               variant="primary"
             >
-              <Plus size={16} /> New Campaign
+              <Plus size={18} className="mr-1.5" /> New Campaign
             </Button>
           </div>
         </div>
@@ -155,7 +155,7 @@ const Campaigns = () => {
                             </div>
                           </>
                         )}
-                        <Button variant="outline" className="w-full group-hover:bg-primary-50 group-hover:border-primary-200 text-slate-900 font-semibold">
+                        <Button variant="outline" className="w-full group-hover:bg-primary-50 group-hover:border-primary-200 text-black font-semibold">
                             View Details <ArrowUpRight size={16} />
                         </Button>
                     </div>

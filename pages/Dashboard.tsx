@@ -231,7 +231,7 @@ const Dashboard = () => {
                 <h3 className="text-lg font-bold text-slate-800">Recent Donations</h3>
                 <button 
                   onClick={loadDashboardData}
-                  className="text-sm text-primary-600 hover:text-primary-700 font-bold px-4 py-2 rounded-lg bg-primary-50 hover:bg-primary-100 transition-colors"
+                  className="text-sm text-black hover:text-black font-bold px-4 py-2 rounded-lg bg-white hover:bg-slate-50 border-2 border-primary-600 shadow-md transition-colors"
                 >
                   Refresh
                 </button>
